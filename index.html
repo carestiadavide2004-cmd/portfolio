@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carestia Web — Siti web moderni per attività locali</title>
+  <meta name="description" content="Carestia Web realizza siti web moderni, veloci e su misura per ristoranti, palestre, negozi, bar e boutique.">
+  <meta name="theme-color" content="#07080c">
+  <meta property="og:title" content="Carestia Web — Siti web moderni per attività locali">
+  <meta property="og:description" content="Siti moderni, veloci e su misura per ristoranti, palestre, negozi, bar e boutique.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/trattoria-da-mario.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Carestia Web — torna all'inizio">
+        <img class="brand__mark" src="assets/img/logo-mark.svg" alt="" width="34" height="34">
+        <span class="brand__name">Carestia Web</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navigazione principale">
+        <a href="#lavori">Lavori</a>
+        <a href="#processo">Come funziona</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+
+      <a href="#contatti" class="btn btn--primary btn--sm nav__cta">Richiedi un preventivo</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#lavori">Lavori</a>
+      <a href="#processo">Come funziona</a>
+      <a href="#contatti">Contatti</a>
+      <a href="#contatti" class="btn btn--primary">Richiedi un preventivo</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow reveal">
+          <span class="pulse" aria-hidden="true"></span>
+          Disponibile per nuovi progetti
+        </p>
+
+        <h1 class="hero__title reveal" style="--d: 80ms">
+          Siti web che fanno<br>
+          <em>entrare clienti</em> dalla porta.
+        </h1>
+
+        <p class="hero__lead reveal" style="--d: 160ms">
+          <strong>Carestia Web</strong> crea siti moderni, veloci e su misura per attività locali:
+          ristoranti, palestre, negozi, bar e boutique. Design curato, zero template, pronti online.
+        </p>
+
+        <div class="hero__actions reveal" style="--d: 240ms">
+          <a href="#lavori" class="btn btn--primary btn--lg">
+            Guarda i lavori
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <a href="#contatti" class="btn btn--ghost btn--lg">Parliamo del tuo progetto</a>
+        </div>
+
+        <ul class="hero__facts reveal" style="--d: 320ms" aria-label="Punti di forza">
+          <li><span>100%</span> su misura</li>
+          <li><span>Mobile</span> first</li>
+          <li><span>&lt;2s</span> di caricamento</li>
+          <li><span>Admin</span> opzionale</li>
+        </ul>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Ristoranti</span><i>✦</i><span>Palestre</span><i>✦</i><span>Negozi</span><i>✦</i><span>Bar</span><i>✦</i><span>Boutique</span><i>✦</i><span>Streetwear</span><i>✦</i><span>Pizzerie</span><i>✦</i><span>Studi</span><i>✦</i>
+          <span>Ristoranti</span><i>✦</i><span>Palestre</span><i>✦</i><span>Negozi</span><i>✦</i><span>Bar</span><i>✦</i><span>Boutique</span><i>✦</i><span>Streetwear</span><i>✦</i><span>Pizzerie</span><i>✦</i><span>Studi</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section class="section work" id="lavori">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker reveal">01 — Portfolio</p>
+          <h2 class="section__title reveal" style="--d: 60ms">
+            Progetti concreti, <em>online adesso.</em>
+          </h2>
+          <p class="section__lead reveal" style="--d: 120ms">
+            Ogni sito nasce dall'identità dell'attività: colori, tono, foto e funzioni pensate per chi entra.
+            Clicca su un progetto e provalo dal vivo.
+          </p>
+        </div>
+
+        <p class="work__note reveal">
+          Ecco alcuni siti dimostrativi, pensati per mostrarti esempi di cosa si può creare.
+        </p>
+
+        <div class="work__grid">
+
+          <article class="project reveal" style="--accent: #c9a24a">
+            <a class="project__link" href="https://carestiadavide2004-cmd.github.io/trattoria-da-mario/" target="_blank" rel="noopener" aria-label="Apri il sito Trattoria da Mario in una nuova scheda">
+              <div class="project__frame">
+                <div class="browser">
+                  <span></span><span></span><span></span>
+                  <div class="browser__url">trattoria-da-mario</div>
+                </div>
+                <div class="project__shot">
+                  <img src="assets/img/trattoria-da-mario.jpg" alt="Homepage del sito Trattoria da Mario" width="1200" height="900" loading="lazy" decoding="async">
+                </div>
+                <span class="project__visit">Visita il sito <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+              </div>
+              <div class="project__body">
+                <div class="project__meta">
+                  <span class="project__num">01</span>
+                  <span class="tag">Ristorante</span>
+                </div>
+                <h3 class="project__title">Trattoria da Mario</h3>
+                <p class="project__desc">
+                  Atmosfera calda e tipografia classica per una trattoria di famiglia.
+                  Menu sfogliabile, galleria piatti e contatti a portata di tap.
+                </p>
+                <ul class="project__features">
+                  <li>Menu digitale</li><li>Galleria</li><li>Prenotazioni</li>
+                </ul>
+              </div>
+            </a>
+          </article>
+
+          <article class="project reveal" style="--accent: #d9c3a0; --d: 80ms">
+            <a class="project__link" href="https://carestiadavide2004-cmd.github.io/maison-lumiere/" target="_blank" rel="noopener" aria-label="Apri il sito Maison Lumière in una nuova scheda">
+              <div class="project__frame">
+                <div class="browser">
+                  <span></span><span></span><span></span>
+                  <div class="browser__url">maison-lumiere</div>
+                </div>
+                <div class="project__shot">
+                  <img src="assets/img/maison-lumiere.jpg" alt="Homepage del sito Maison Lumière" width="1200" height="900" loading="lazy" decoding="async">
+                </div>
+                <span class="project__badge">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+                  Pannello admin
+                </span>
+                <span class="project__visit">Visita il sito <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+              </div>
+              <div class="project__body">
+                <div class="project__meta">
+                  <span class="project__num">02</span>
+                  <span class="tag">Boutique</span>
+                </div>
+                <h3 class="project__title">Maison Lumière</h3>
+                <p class="project__desc">
+                  Eleganza senza tempo per una boutique di moda, con pannello admin
+                  per aggiornare collezione e contenuti in totale autonomia.
+                </p>
+                <ul class="project__features">
+                  <li>Collezione</li><li>Recensioni</li><li class="is-accent">Admin</li>
+                </ul>
+              </div>
+            </a>
+          </article>
+
+          <article class="project reveal" style="--accent: #ff1e3c">
+            <a class="project__link" href="https://carestiadavide2004-cmd.github.io/blackout-store/" target="_blank" rel="noopener" aria-label="Apri il sito Blackout Store in una nuova scheda">
+              <div class="project__frame">
+                <div class="browser">
+                  <span></span><span></span><span></span>
+                  <div class="browser__url">blackout-store</div>
+                </div>
+                <div class="project__shot">
+                  <img src="assets/img/blackout-store.jpg?v=2" alt="Homepage del sito Blackout Store" width="1200" height="900" loading="lazy" decoding="async">
+                </div>
+                <span class="project__visit">Visita il sito <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+              </div>
+              <div class="project__body">
+                <div class="project__meta">
+                  <span class="project__num">03</span>
+                  <span class="tag">Streetwear</span>
+                </div>
+                <h3 class="project__title">Blackout Store</h3>
+                <p class="project__desc">
+                  Un negozio streetwear dal carattere urbano: collezione, lookbook,
+                  preferiti e carrello per un'esperienza da vero e-shop.
+                </p>
+                <ul class="project__features">
+                  <li>Catalogo</li><li>Lookbook</li><li>Carrello</li>
+                </ul>
+              </div>
+            </a>
+          </article>
+
+          <article class="project reveal" style="--accent: #c6f432; --d: 80ms">
+            <a class="project__link" href="https://carestiadavide2004-cmd.github.io/titan-gym/" target="_blank" rel="noopener" aria-label="Apri il sito Titan Gym in una nuova scheda">
+              <div class="project__frame">
+                <div class="browser">
+                  <span></span><span></span><span></span>
+                  <div class="browser__url">titan-gym</div>
+                </div>
+                <div class="project__shot">
+                  <img src="assets/img/titan-gym.jpg" alt="Homepage del sito Titan Gym" width="1200" height="900" loading="lazy" decoding="async">
+                </div>
+                <span class="project__visit">Visita il sito <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+              </div>
+              <div class="project__body">
+                <div class="project__meta">
+                  <span class="project__num">04</span>
+                  <span class="tag">Palestra</span>
+                </div>
+                <h3 class="project__title">Titan Gym</h3>
+                <p class="project__desc">
+                  Energia e contrasto forte per una palestra che punta alla performance.
+                  Corsi, abbonamenti e recensioni in un'unica pagina che spinge all'azione.
+                </p>
+                <ul class="project__features">
+                  <li>Corsi</li><li>Abbonamenti</li><li>Recensioni</li>
+                </ul>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESSO ============ -->
+    <section class="section process" id="processo">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker reveal">02 — Come funziona</p>
+          <h2 class="section__title reveal" style="--d: 60ms">
+            Quattro passi, <em>nessun pensiero.</em>
+          </h2>
+          <p class="section__lead reveal" style="--d: 120ms">
+            Tu pensi alla tua attività, io a tutto il resto. Un percorso semplice e trasparente,
+            dal primo messaggio al sito online.
+          </p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Mi racconti la tua attività</h3>
+            <p class="step__text">Mi contatti e parliamo di chi sei, dei tuoi clienti e di cosa ti serve dal sito.</p>
+          </li>
+          <li class="step reveal" style="--d: 80ms">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Proposta su misura</h3>
+            <p class="step__text">Ti preparo una proposta chiara con struttura, stile e funzioni pensate per te.</p>
+          </li>
+          <li class="step reveal" style="--d: 160ms">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Costruisco il sito</h3>
+            <p class="step__text">Design e sviluppo curati in ogni dettaglio, con aggiornamenti costanti su come procede.</p>
+          </li>
+          <li class="step reveal" style="--d: 240ms">
+            <span class="step__num">04</span>
+            <h3 class="step__title">Online e pronto</h3>
+            <p class="step__text">Te lo consegno pubblicato, veloce e perfetto su ogni dispositivo. Tu inizi a ricevere clienti.</p>
+          </li>
+        </ol>
+
+        <div class="admin reveal">
+          <div class="admin__copy">
+            <span class="tag tag--blue">Servizio aggiuntivo</span>
+            <h3 class="admin__title">Vuoi aggiornare il sito <em>da solo?</em></h3>
+            <p>
+              Posso aggiungere un pannello admin semplice e protetto: cambi menu, prezzi, foto,
+              orari e prodotti in pochi click, senza toccare una riga di codice.
+            </p>
+            <ul class="admin__points">
+              <li>Login riservato, accessibile solo a te</li>
+              <li>Modifiche online in tempo reale</li>
+              <li>Pensato per essere usato anche da smartphone</li>
+            </ul>
+          </div>
+
+          <div class="admin__ui" aria-hidden="true">
+            <div class="ui">
+              <div class="ui__side">
+                <i class="is-active"></i><i></i><i></i><i></i>
+              </div>
+              <div class="ui__main">
+                <div class="ui__bar"><b></b><span class="ui__save">Salva</span></div>
+                <div class="ui__row"><span class="ui__thumb"></span><div><b style="width:62%"></b><b class="sm" style="width:38%"></b></div><span class="ui__toggle is-on"></span></div>
+                <div class="ui__row"><span class="ui__thumb"></span><div><b style="width:48%"></b><b class="sm" style="width:30%"></b></div><span class="ui__toggle is-on"></span></div>
+                <div class="ui__row"><span class="ui__thumb"></span><div><b style="width:70%"></b><b class="sm" style="width:24%"></b></div><span class="ui__toggle"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATTI ============ -->
+    <section class="section contact" id="contatti">
+      <div class="container contact__inner">
+        <div class="contact__intro">
+          <p class="kicker reveal">03 — Preventivo</p>
+          <h2 class="section__title reveal" style="--d: 60ms">
+            Parliamo del <em>tuo</em> sito.
+          </h2>
+          <p class="section__lead reveal" style="--d: 120ms">
+            Raccontami la tua attività e cosa hai in mente. Ti rispondo entro 24 ore con
+            una proposta su misura: ogni progetto è diverso, e anche il preventivo.
+          </p>
+
+          <div class="direct reveal" style="--d: 180ms">
+            <p class="direct__label">Preferisci scrivere o chiamare?</p>
+            <a class="direct__phone" href="tel:+393240806426">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              +39 324 08 06 426
+            </a>
+            <div class="direct__links">
+              <a class="chip" href="https://wa.me/393240806426" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+                WhatsApp
+              </a>
+              <a class="chip" href="mailto:carestia.davide2004@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                carestia.davide2004@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <form class="form reveal" id="contactForm" style="--d: 120ms" novalidate>
+          <div class="field">
+            <label for="name">Nome</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Mario Rossi" required>
+            <span class="field__error">Inserisci il tuo nome</span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="mario@latuaattivita.it" required>
+            <span class="field__error">Inserisci un'email valida</span>
+          </div>
+          <div class="field">
+            <label for="message">Messaggio</label>
+            <textarea id="message" name="message" rows="5" placeholder="Ho un ristorante a… e vorrei un sito con menu e prenotazioni." required></textarea>
+            <span class="field__error">Scrivi due righe sul tuo progetto</span>
+          </div>
+
+          <!-- honeypot anti-spam -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <button type="submit" class="btn btn--primary btn--lg btn--block">
+            <span class="btn__label">Invia richiesta</span>
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form__note">Nessun impegno. Il preventivo è gratuito e personalizzato.</p>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <p class="footer__claim">
+          Il tuo prossimo cliente<br>ti sta già <em>cercando online.</em>
+        </p>
+        <a href="#contatti" class="btn btn--primary btn--lg">Iniziamo</a>
+      </div>
+
+      <div class="footer__bottom">
+        <a href="#top" class="brand" aria-label="Carestia Web — torna all'inizio">
+          <img class="brand__mark" src="assets/img/logo-mark.svg" alt="" width="34" height="34">
+          <span class="brand__name">Carestia Web</span>
+        </a>
+
+        <p class="footer__copy">© <span id="year">2026</span> Carestia Web · Fatto a mano, pixel per pixel.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
