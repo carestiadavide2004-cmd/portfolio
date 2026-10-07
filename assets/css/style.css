@@ -557,7 +557,9 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .project__features li.is-accent::before { background: var(--blue-hi); }
 
 /* ---------- Process ---------- */
-.process { background: linear-gradient(180deg, var(--bg), var(--bg-2) 30%, var(--bg)); border-top: 1px solid var(--line); }
+/* stesso risultato visivo di var(--bg) → var(--bg-2) → var(--bg), ma semitrasparente
+   così l'omino sullo sfondo resta visibile anche in questa sezione */
+.process { background: linear-gradient(180deg, rgba(17,20,28,0), rgba(17,20,28,.5) 30%, rgba(17,20,28,0)); border-top: 1px solid var(--line); }
 .steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -886,6 +888,26 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .cursor.is-link.is-down .cursor__ring::before { inset: -6px; }
 .cursor.is-card.is-down .cursor__ring::before { inset: -18px; }
 
+/* ---------- Omino sullo sfondo ---------- */
+.watcher {
+  position: fixed; right: clamp(12px, 5vw, 80px); bottom: 0; z-index: -1;
+  width: clamp(150px, 14vw, 210px);
+  color: var(--text-3);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1.6s var(--ease) .5s, transform 1.6s var(--ease) .5s;
+}
+.watcher.is-ready { opacity: .62; transform: none; }
+.watcher__svg { width: 100%; height: auto; overflow: visible; }
+.watcher__line { stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+.watcher__line--soft { opacity: .55; }
+.watcher__skull { fill: var(--bg); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+.watcher__halo, .watcher__glint, .watcher__eye { stroke: none; }
+.watcher__glint { fill: rgba(91, 140, 255, .16); }
+.watcher__eye { fill: var(--blue-hi); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
   .steps { grid-template-columns: repeat(2, 1fr); }
@@ -931,6 +953,9 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 
   .footer__top { align-items: flex-start; }
   .footer__bottom { flex-direction: column; align-items: flex-start; }
+
+  .watcher { width: 112px; right: 6px; }
+  .watcher.is-ready { opacity: .42; }
 }
 
 @media (hover: none) {

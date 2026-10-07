@@ -378,6 +378,37 @@
 
   </main>
 
+  <!-- ============ OMINO (easter egg sullo sfondo) ============ -->
+  <div class="watcher" id="watcher" aria-hidden="true">
+    <svg class="watcher__svg" viewBox="0 0 200 260" focusable="false">
+      <defs>
+        <radialGradient id="watcherHalo">
+          <stop offset="0" stop-color="#2f6bff" stop-opacity=".22"/>
+          <stop offset="1" stop-color="#2f6bff" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle class="watcher__halo" cx="100" cy="74" r="78" fill="url(#watcherHalo)"/>
+      <g data-part="body">
+        <path class="watcher__line" d="M24 260C26 204 38 166 68 154 82 149 92 147 100 147s18 2 32 7c30 12 42 50 44 106"/>
+        <path class="watcher__line watcher__line--soft" d="M56 196c1 24 2 44 2 64M144 196c-1 24-2 44-2 64M88 150q12 16 24 0"/>
+        <path class="watcher__line" d="M91 102l1 46M109 102l-1 46"/>
+        <g data-part="head">
+          <ellipse class="watcher__skull" cx="100" cy="70" rx="29" ry="35"/>
+          <path class="watcher__line watcher__line--soft" data-part="hair" d="M74 56c3-15 14-21 27-21 15 0 24 9 26 21"/>
+          <g data-part="face">
+            <path class="watcher__line watcher__line--soft" d="M83 60q6-3 12 0M105 60q6-3 12 0M100 72l-2 9 3 1"/>
+            <g data-part="eyes">
+              <circle class="watcher__glint" cx="89" cy="69" r="6"/>
+              <circle class="watcher__glint" cx="111" cy="69" r="6"/>
+              <ellipse class="watcher__eye" cx="89" cy="69" rx="2.6" ry="2.6"/>
+              <ellipse class="watcher__eye" cx="111" cy="69" rx="2.6" ry="2.6"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container">
