@@ -405,8 +405,19 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(20px, 3vw, 32px);
 }
-.work__grid .project:nth-child(even) { transform: translateY(64px); }
-.work__grid .project:nth-child(even).reveal:not(.is-visible) { transform: translateY(96px); }
+.work__grid .project:nth-child(even of :not(.project--featured)) { transform: translateY(64px); }
+.work__grid .project:nth-child(even of :not(.project--featured)).reveal:not(.is-visible) { transform: translateY(96px); }
+/* progetto in evidenza: occupa entrambe le colonne, immagine e testo affiancati */
+.project--featured { grid-column: 1 / -1; }
+@media (min-width: 901px) {
+  .project--featured .project__link {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    align-items: center;
+    gap: clamp(8px, 2vw, 24px);
+  }
+  .project--featured .project__body { padding: 18px clamp(18px, 2.4vw, 32px) 18px 8px; }
+}
 .work { padding-bottom: calc(clamp(96px, 13vw, 160px) + 64px); }
 
 .project__link {
@@ -825,7 +836,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   transition: opacity .9s var(--ease) var(--d, 0ms), transform .9s var(--ease) var(--d, 0ms);
 }
 .js .reveal.is-visible { opacity: 1; transform: none; }
-.js .work__grid .project:nth-child(even).reveal.is-visible { transform: translateY(64px); }
+.js .work__grid .project:nth-child(even of :not(.project--featured)).reveal.is-visible { transform: translateY(64px); }
 
 /* ---------- Cursore personalizzato ---------- */
 .cursor { display: none; }
@@ -919,8 +930,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   .nav__toggle { display: block; }
 
   .work__grid { grid-template-columns: 1fr; gap: 24px; }
-  .work__grid .project:nth-child(even),
-  .js .work__grid .project:nth-child(even).reveal.is-visible { transform: none; }
+  .work__grid .project:nth-child(even of :not(.project--featured)),
+  .js .work__grid .project:nth-child(even of :not(.project--featured)).reveal.is-visible { transform: none; }
   .work { padding-bottom: clamp(96px, 13vw, 160px); }
 
   .admin { grid-template-columns: 1fr; gap: 40px; }
