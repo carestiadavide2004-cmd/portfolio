@@ -126,6 +126,10 @@ window.CW_CONFIG = {
    2. Metti le immagini in assets/img/lavori/ con questi nomi:
         pizzeria-luna-computer.webp   (1200 × 750, la home vista da computer)
         pizzeria-luna-telefono.webp   ( 480 × 1040, la home vista da telefono)
+      e, per la scena 3D in alto, le stesse home in alta risoluzione in assets/img/3d/:
+        pizzeria-luna-computer.webp   (2048 × 1280, screenshot a 1440 × 900 con densità 2x)
+        pizzeria-luna-telefono.webp   ( 780 × 1688, screenshot a 390 × 844 con densità 2x)
+      (se mancano, la scena usa le immagini delle carte, un po' meno nitide)
    3. (Facoltativo) Metti i video di anteprima in assets/video/:
         pizzeria-luna-computer.mp4    (800 × 500, 5-6 secondi, muto, max 600 KB)
         pizzeria-luna-telefono.mp4    (360 × 780, 5-6 secondi, muto, max 600 KB)

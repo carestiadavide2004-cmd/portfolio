@@ -33,7 +33,14 @@
     const custom = ext === "mp4" ? w.video && w.video[kind] : w.immagini && w.immagini[kind];
     return custom || `assets/${ext === "mp4" ? "video" : "img/lavori"}/${w.id}-${kind}.${ext}`;
   };
-  CW.works = cfg.lavori.map((w) => ({ ...w, colore: catOf(w).colore, img: { computer: media(w, "computer", "webp"), telefono: media(w, "telefono", "webp") } }));
+  // screenshot ad alta risoluzione per la scena 3D (se mancano, la scena usa quelli delle carte)
+  const media3d = (w, kind) => (w.immagini3d && w.immagini3d[kind]) || `assets/img/3d/${w.id}-${kind}.webp`;
+  CW.works = cfg.lavori.map((w) => ({
+    ...w,
+    colore: catOf(w).colore,
+    img: { computer: media(w, "computer", "webp"), telefono: media(w, "telefono", "webp") },
+    img3d: { computer: media3d(w, "computer"), telefono: media3d(w, "telefono") },
+  }));
 
   /* ---------- contatti presi da config.js ---------- */
   const c = cfg.contatti;
