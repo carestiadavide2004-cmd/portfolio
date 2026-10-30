@@ -292,8 +292,53 @@ main > section, .ribbons, .footer { overflow-x: hidden; }
   .hero__cue i { position: absolute; inset: 0; background: var(--white); transform: translateY(-100%); animation: cue 2.4s var(--ease-io) infinite; }
 }
 @keyframes cue { 0% { transform: translateY(-100%); } 60%, 100% { transform: translateY(100%); } }
-.no3d .hero { background: url("../img/hero-statico.webp") 72% 0 / auto 60% no-repeat; }
-@media (min-width: 900px) { .no3d .hero { background-position: 70% 30%; background-size: cover; } }
+
+/* pannelli con i siti (panels.js): veri <img> in CSS 3D, sempre nitidi */
+.hero { isolation: isolate; }
+.hero::before {
+  z-index: 0;
+  /* in basso l'hero sfuma morbida nello sfondo della pagina: nessun taglio */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0, #000 72%, transparent 100%);
+}
+.hero__panels {
+  position: absolute; inset: 0; z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  perspective: 1100px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0, #000 72%, transparent 100%);
+}
+.hpanel {
+  position: absolute; left: 0; top: 0; margin: 0;
+  overflow: hidden;
+  border-radius: var(--r, 12px);
+  background: var(--ink-2);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--c) 80%, transparent),
+    0 0 26px -6px color-mix(in srgb, var(--c) 85%, transparent),
+    0 40px 80px -36px color-mix(in srgb, var(--c) 75%, transparent);
+  opacity: 0;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+.hpanel img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.hpanel__shade { position: absolute; inset: 0; background: var(--ink); opacity: 0; }
+/* riflesso a vetro leggero, solo sull'angolo: non copre il sito */
+.hpanel::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(128deg, rgba(255, 255, 255, .16) 0%, rgba(255, 255, 255, .05) 16%, rgba(255, 255, 255, 0) 32%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .14);
+}
+.hero__inner { z-index: 2; isolation: isolate; }
+/* alone scuro morbido dietro al testo */
+.hero__inner::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  left: -40px; top: -70px; bottom: -60px;
+  width: min(calc(100% + 80px), 1000px);
+  background: radial-gradient(ellipse 60% 56% at 38% 52%, rgba(12, 8, 32, .6), rgba(12, 8, 32, .3) 55%, rgba(12, 8, 32, 0) 80%);
+}
+.hero__cue { z-index: 2; }
 
 /* ---------- nastri ---------- */
 .ribbons {
@@ -438,9 +483,6 @@ main > section, .ribbons, .footer { overflow-x: hidden; }
   .card:hover .card__inner { border-color: color-mix(in srgb, var(--c) 70%, transparent); box-shadow: 0 24px 60px -24px color-mix(in srgb, var(--c) 75%, transparent); }
   .card:hover .card__glare { opacity: 1; }
 }
-/* passaggio di consegne dalla scena 3D: la scena accende la carta quando il pannello "atterra" */
-.has-handoff .card:not(.card--cta) .card__inner { opacity: var(--frame, 0); }
-.has-handoff .card:not(.card--cta) .card__visual { opacity: var(--shot, 0); }
 
 .card--cta { grid-column: 1 / -1; }
 .cta-card {

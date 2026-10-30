@@ -194,9 +194,6 @@
 
   function applyFilter(id) {
     CW.filter = id;
-    CW.handoff = false; // dopo un filtro le carte restano sempre visibili
-    html.classList.remove("has-handoff");
-    if (CW.scene) CW.scene.stopHandoff();
     const all = $$(".card", grid);
     const flip = window.Flip && window.gsap && !reduced;
     const state = flip ? Flip.getState(all) : null;
@@ -463,7 +460,7 @@
 
   fillContacts();
 
-  /* ---------- scena 3D: solo con WebGL2 e senza "riduci movimento" ---------- */
+  /* ---------- sfondo 3D: solo con WebGL2 e senza "riduci movimento" (i pannelli dell'hero sono in panels.js) ---------- */
   const stage = $("#stage");
   let gl = null;
   if (!reduced) {

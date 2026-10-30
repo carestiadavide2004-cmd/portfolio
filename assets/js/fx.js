@@ -181,8 +181,8 @@
     });
   });
 
-  /* ---------- carte dei lavori a ventaglio (solo se la scena 3D non fa l'atterraggio) ---------- */
-  if (!CW.want3d) {
+  /* ---------- carte dei lavori a ventaglio ---------- */
+  {
     ScrollTrigger.batch(".card", {
       start: "top 92%",
       once: true,

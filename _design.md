@@ -21,7 +21,7 @@
 - Testo su colori pieni sempre in `#0C0820`; testo su sfondo scuro in bianco o `#CFC8EA`.
 - Lo shader ha un tetto di luminosità (`uCap` in scene.js): non alzarlo, protegge il contrasto.
 - Niente backdrop-filter (pesa con la scena 3D dietro).
-- Scena 3D: texture in assets/img/3d a 2x, pannelli sempre a piena risoluzione (pixel ratio fino a 2); se serve alleggerire si toglie un pannello o si abbassa lo sfondo, mai la nitidezza. I pannelli evitano titolo, sottotitolo e pulsanti.
+- Hero: sfondo in WebGL (scene.js), pannelli come veri <img> in CSS 3D (panels.js), sempre dietro il piano dello schermo (mai ingranditi, mai sfocati); evitano titolo, sottotitolo e pulsanti.
 - Puntatore "goccia di luce" (cursor.js) solo con mouse; il focus da tastiera resta quello del sito.
 - Animare solo transform, opacity, clip-path.
 - Dati dei lavori e contatti solo in config.js.
